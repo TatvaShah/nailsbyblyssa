@@ -5,11 +5,11 @@ import { has, igDmUrl, site } from "@/lib/site";
 
 export function navLinks() {
   const links: { href: string; label: string }[] = [];
-  if (has(site.menu?.groups)) links.push({ href: "#menu", label: "Menu" });
+  if (has(site.menu?.groups)) links.push({ href: "#menu", label: site.menu?.label ?? "Menu" });
   if (has(site.gallery?.items)) links.push({ href: "#gallery", label: "Gallery" });
   if (site.about?.body?.length) links.push({ href: "#about", label: "About" });
   if (has(site.reviews?.items)) links.push({ href: "#reviews", label: "Reviews" });
-  links.push({ href: "#order", label: "How to order" });
+  links.push({ href: "#order", label: site.order.label ?? "How to order" });
   return links;
 }
 
@@ -32,7 +32,7 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <DmButton href={igDmUrl} message={site.order.dmMessage} label="DM to order" className="btn btn-primary !px-4 !py-2 text-sm" />
+        <DmButton href={igDmUrl} message={site.order.dmMessage} label={site.order.headerCtaLabel ?? "DM to order"} className="btn btn-primary !px-4 !py-2 text-sm" />
       </div>
     </header>
   );

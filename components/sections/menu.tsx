@@ -7,7 +7,7 @@ export function Menu() {
   const list = m.variant === "list";
   return (
     <section id="menu" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-16 md:py-24">
-      <SectionHead eyebrow="Menu" title={m.title ?? "What we make"} intro={m.intro} />
+      <SectionHead eyebrow={m.label ?? "Menu"} title={m.title ?? "What we make"} intro={m.intro} />
       {m.groups.map((g) => (
         <div key={g.title} className="mt-12">
           {m.groups.length > 1 || g.title ? <h3 className="text-2xl sm:text-3xl">{g.title}</h3> : null}

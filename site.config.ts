@@ -53,6 +53,7 @@ export const site: SiteConfig = {
   },
 
   menu: {
+    label: "Services",
     title: "Services",
     intro: "October Mix n Match pricing posted for gel and structured manicures. Full policies and updated prices are shared on Instagram.",
     variant: "list",
@@ -172,6 +173,8 @@ export const site: SiteConfig = {
   },
 
   order: {
+    label: "How to book",
+    headerCtaLabel: "DM to book",
     title: "Book your appointment",
     intro:
       "Most clients book online on Setmore. If no slot works, send a DM and I will try to make it work. Tap below to open booking, or copy a starter message for Instagram.",
@@ -206,6 +209,7 @@ export const site: SiteConfig = {
   ],
 
   contact: {
+    title: "Contact and booking",
     area: "Toronto, Ontario",
     email: "nailsbyblyssa@gmail.com",
     socials: [

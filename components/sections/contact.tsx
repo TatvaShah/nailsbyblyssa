@@ -10,7 +10,7 @@ export function Contact() {
   if (!any) return null;
   return (
     <section id="contact" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-16 md:py-24">
-      <SectionHead eyebrow="Find us" title="Contact and pickup" />
+      <SectionHead eyebrow="Find us" title={site.contact?.title ?? "Contact and pickup"} />
       <div className={`mt-10 grid gap-8 ${c.address ? "md:grid-cols-2" : ""}`}>
         <dl className="grid content-start gap-5">
           {area ? (

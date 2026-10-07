@@ -11,7 +11,7 @@ export function Order() {
     <section id="order" className="scroll-mt-24 bg-soft">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:py-24">
         <div>
-          <SectionHead eyebrow="How to order" title={o.title ?? "Order in a quick DM"} intro={o.intro} />
+          <SectionHead eyebrow={o.label ?? "How to order"} title={o.title ?? "Order in a quick DM"} intro={o.intro} />
           <ol className="mt-8 grid gap-4">
             {steps.map((s, i) => (
               <li key={s} className="flex gap-4">

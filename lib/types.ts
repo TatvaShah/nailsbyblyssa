@@ -95,6 +95,7 @@ export type SiteConfig = {
   about?: { title?: string; body: string[]; image?: Img };
 
   menu?: {
+    label?: string; // nav and eyebrow label, default "Menu" (use "Services" for non-food)
     title?: string;
     intro?: string;
     variant?: "cards" | "list";
@@ -113,6 +114,8 @@ export type SiteConfig = {
   };
 
   order: {
+    label?: string; // nav and eyebrow label, default "How to order" (e.g. "How to book")
+    headerCtaLabel?: string; // header DM button, default "DM to order" (e.g. "DM to book")
     title?: string;
     intro?: string;
     steps?: string[];
@@ -126,6 +129,7 @@ export type SiteConfig = {
   faq?: Faq[];
 
   contact?: {
+    title?: string; // default "Contact and pickup"
     area?: string;
     address?: string; // only if public; adds a map
     hours?: { days: string; time: string }[];
